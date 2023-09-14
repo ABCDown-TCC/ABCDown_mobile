@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.ApplicationStartup
+package br.senai.sp.jandira.abcdown_mobile.gui.applicationStartup
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

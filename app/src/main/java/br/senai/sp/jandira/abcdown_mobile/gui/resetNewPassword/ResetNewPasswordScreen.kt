@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.ResetNewPassword
+package br.senai.sp.jandira.abcdown_mobile.gui.resetNewPassword
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController

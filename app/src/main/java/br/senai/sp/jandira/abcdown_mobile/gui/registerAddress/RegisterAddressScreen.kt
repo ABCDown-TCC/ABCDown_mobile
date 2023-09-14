@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.RegisterAddress
+package br.senai.sp.jandira.abcdown_mobile.gui.registerAddress
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController

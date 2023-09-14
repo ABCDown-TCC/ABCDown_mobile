@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.RegisterEmailPassword
+package br.senai.sp.jandira.abcdown_mobile.gui.registerEmailPassword
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController

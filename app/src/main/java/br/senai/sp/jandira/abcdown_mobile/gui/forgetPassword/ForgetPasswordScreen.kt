@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.ForgetPassword
+package br.senai.sp.jandira.abcdown_mobile.gui.forgetPassword
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

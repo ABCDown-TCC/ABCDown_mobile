@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown.gui.CodeCheck
+package br.senai.sp.jandira.abcdown_mobile.gui.codeCheck
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
