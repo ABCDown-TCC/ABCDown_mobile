@@ -30,6 +30,7 @@ import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.ContinueWithGoogle
+import br.senai.sp.jandira.abcdown_mobile.components.FooterWithNavigationText
 import br.senai.sp.jandira.abcdown_mobile.components.TextField
 
 @Composable
@@ -96,24 +97,18 @@ fun LoginScreen(navController: NavController) {
         ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
             navController.navigate("studentArea")
         })
-        
+
         ContinueWithGoogle(text = stringResource(id = R.string.continue_with_google))
 
-        Row() {
-            Text(
-                text = stringResource(id = R.string.dont_have_an_account)
-            )
 
-            Text(
-                text = stringResource(id = R.string.create_an_account),
-                modifier = Modifier
-                    .clickable {
-                        navController.navigate("register")
-                    },
-                color = colorResource(id = R.color.blue),
-                fontWeight = FontWeight.Medium
-            )
-        }
+
+        FooterWithNavigationText(
+            navController = navController,
+            text = stringResource(id = R.string.dont_have_an_account),
+            textNavigation = stringResource(id = R.string.create_an_account),
+            modifier = Modifier,
+            navigate = "register"
+        )
 
 
     }

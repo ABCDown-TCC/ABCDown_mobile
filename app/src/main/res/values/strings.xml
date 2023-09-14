@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ABCDown</string>
     <string name="welcome">Bem vindo</string>
+    <string name="create_an_account_now">Crie uma conta agora!</string>
     <string name="log_in_to_your_account">Entre na sua conta</string>
     <string name="email_or_user">E-mail ou usuário</string>
     <string name="type_your_email_or_user">Digite seu e-mail ou usuário</string>
@@ -8,7 +9,37 @@
     <string name="password">Senha</string>
     <string name="forget_password">Esqueceu a senha?</string>
     <string name="enter">Entrar</string>
+    <string name="send">Enviar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add">Adicionar</string>
     <string name="continue_with_google">ou continue com o Google</string>
     <string name="dont_have_an_account">Não tem uma conta?</string>
     <string name="create_an_account">Criar uma conta</string>
+    <string name="forgot_my_password">Esqueci minha senha</string>
+    <string name="forgot_my_password_description">Por favor, insira a baixo o enderço de e-mail utilizado no cadastro</string>
+    <string name="check_your_email">Verifique seu e-mail</string>
+    <string name="check_your_email_description">Confirme que essa conta é realmente sua inserindo o código que enviamos para</string>
+    <string name="did_not_get_email">Nâo recebeu o e-mail?</string>
+    <string name="resend">Reenviar</string>
+    <string name="reset_my_password">Redefinir minha senha</string>
+    <string name="reset_my_password_description">Agora, insira sua nova senha</string>
+    <string name="new_password">Nova senha</string>
+    <string name="type_your_new_password">Digite sua nova senha</string>
+    <string name="confirm_password">Confirmar senha</string>
+    <string name="confirm_your_new_password">Confirme sua nova senha</string>
+    <string name="cep">CEP</string>
+    <string name="street">Logradouro</string>
+    <string name="neighborhood">Bairro</string>
+    <string name="city">Cidade</string>
+    <string name="state">Estado</string>
+    <string name="number">Número</string>
+    <string name="class_code">Código da turma</string>
+    <string name="type_class_code">Digite o cógigo que o professor compartilhou com você aqui</string>
+    <string name="explanation_class_code">Se o professor do aluno utiliza nosso APP, insira aqui o código da turma. Não entendeu? Saber mais</string>
+    <string name="studant_area">Área do estudante</string>
+    <string name="track_registered_students">Acompanhe os estudantes que você cadastrou</string>
+    <string name="new_option">Novo</string>
+    <string name="all_option">Todos</string>
+
 </resources>
