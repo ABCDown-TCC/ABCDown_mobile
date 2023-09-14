@@ -66,4 +66,16 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // BIBLIOTECA DE NAVEGAÇÃO
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
+
+    // BIBLIOTECA PARA EFEITOS E ANIMAÇÃO
+    implementation ("com.google.accompanist:accompanist-navigation-animation:0.30.1")
+
+    // BIBLIOTECA DE NAVEGAÇÃO
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
+
+    // BIBLIOTECA PARA EFEITOS E ANIMAÇÃO
+    implementation ("com.google.accompanist:accompanist-navigation-animation:0.30.1")
 }
