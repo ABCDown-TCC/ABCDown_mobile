@@ -20,15 +20,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.senai.sp.jandira.abcdown.gui.ApplicationStartup.ApplicationStartupScreenScreen
+import br.senai.sp.jandira.abcdown.gui.CodeCheck.CodeCheckScreen
+import br.senai.sp.jandira.abcdown.gui.ForgetPassword.ForgetPasswordScreen
 import br.senai.sp.jandira.abcdown.gui.Login.LoginScreen
 import br.senai.sp.jandira.abcdown.gui.Register.RegisterScreen
+import br.senai.sp.jandira.abcdown.gui.RegisterAddress.RegisterAddressScreen
+import br.senai.sp.jandira.abcdown.gui.RegisterEmailPassword.RegisterEmailPasswordScreen
+import br.senai.sp.jandira.abcdown.gui.RegisterStudent.RegisterStudentScreen
+import br.senai.sp.jandira.abcdown.gui.ResetNewPassword.ResetNewPasswordScreen
 import br.senai.sp.jandira.abcdown_mobile.ui.theme.ABCDown_mobileTheme
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalAnimationApi::class)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,17 +44,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-//                    Greeting("Android")
-                    val navController = rememberAnimatedNavController()
-                    AnimatedNavHost(
-                        navController = navController,
-                        startDestination = "startup",
-                        ) {
-                        composable(route = "startup") { ApplicationStartupScreenScreen(navController) }
-                        composable(route = "login") { LoginScreen(navController) }
-                        composable(route = "register") { RegisterScreen(navController) }
+                    Greeting("Android")
 
-                    }
 
                 }
             }
@@ -57,23 +53,32 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//    Image(
-//        painter = painterResource(id = R.drawable.logo),
-//        contentDescription = "",
-//        modifier = Modifier.width(332.dp).height(200.dp)
-//    )
-//}
+@OptIn(ExperimentalAnimationApi::class)
+@Composable
+fun Greeting(name: String, modifier: Modifier = Modifier) {
+    val navController = rememberAnimatedNavController()
+    AnimatedNavHost(
+        navController = navController,
+        startDestination = "startup",
+    ) {
+        composable(route = "startup") { ApplicationStartupScreenScreen(navController) }
+        composable(route = "login") { LoginScreen(navController) }
+        composable(route = "register") { RegisterScreen(navController) }
+        composable(route = "registerImageChoose") { ForgetPasswordScreen(navController) }
+        composable(route = "registerAddress") { RegisterAddressScreen(navController) }
+        composable(route = "registerEmailPassword") { RegisterEmailPasswordScreen(navController) }
+        composable(route = "forgetPassword") { ForgetPasswordScreen(navController) }
+        composable(route = "codeCheck") { CodeCheckScreen(navController) }
+        composable(route = "resetNewPassword") { ResetNewPasswordScreen(navController) }
+        composable(route = "registerStudent") { RegisterStudentScreen(navController) }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    ABCDown_mobileTheme {
-//        Greeting("Android")
-//    }
-//}
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    ABCDown_mobileTheme {
+        Greeting("Android")
+    }
+}

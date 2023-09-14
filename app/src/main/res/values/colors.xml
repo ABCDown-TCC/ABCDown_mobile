@@ -13,4 +13,12 @@
     <color name="green">#43B1B1</color>
     <color name="yellow">#FABB16</color>
     <color name="orange">#F0754E</color>
+
+    // FONTS COLORS
+    <color name="grey_placeholder">#7E7E7E</color>
+
+    // BORDER TEXTFILD
+    <color name="grey_border_textfild">#D3CDCD</color>
+    D3CDCD
+
 </resources>
