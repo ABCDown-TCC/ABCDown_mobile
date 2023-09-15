@@ -35,7 +35,6 @@ fun FieldImageProfile() {
             modifier = Modifier.size(155.dp),
             alignment = Alignment.Center
         )
-        fixing screens
         Image(
             painter = painterResource(
                 id = R.drawable.add_photo_24
