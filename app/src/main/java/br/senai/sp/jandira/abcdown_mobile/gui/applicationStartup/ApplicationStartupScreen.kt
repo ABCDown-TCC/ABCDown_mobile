@@ -25,7 +25,7 @@ fun ApplicationStartupScreenScreen(navController: NavController) {
     LaunchedEffect(true) {
         // Irá automáticamente para a screen log-in
         delay(1)
-        navController.navigate("registerAddress")
+        navController.navigate("studentArea")
     }
 
     Column (modifier = Modifier
