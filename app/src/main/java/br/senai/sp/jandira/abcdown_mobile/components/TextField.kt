@@ -2,7 +2,12 @@ package br.senai.sp.jandira.abcdown_mobile.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -19,6 +24,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -56,39 +62,47 @@ fun TextField(
         focusedIndicatorColor = borderColor,
     )
 
-    Text(
-        text = stringResource(id = fieldName),
-        fontSize = 16.sp,
-        fontWeight = FontWeight.Bold,
-        color = textColor
-    )
-
-    TextField(
-        value = value,
-        keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-        onValueChange = { onValueChange(it) },
-        textStyle = TextStyle(
-            color = colorResource(id = R.color.grey_placeholder),
-            fontSize = 13.sp
-        ),
-        placeholder = {
-            Text(
-                text = stringResource(id = text),
-                color = colorResource(id = R.color.grey_placeholder)
-            )
-        },
-        colors = TextFieldDefaults.textFieldColors(
-            containerColor = Color.Transparent
-        ),
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.background.copy(alpha = 0f))
-            .onFocusChanged { focusState ->
-                isFocused = focusState.isFocused
-            },
-        singleLine = true,
-
-
+    Column(modifier = Modifier.wrapContentSize()) {
+        Text(
+            text = stringResource(id = fieldName),
+            modifier = Modifier,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            color = textColor
         )
+
+        TextField(
+            value = value,
+            keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
+            onValueChange = { onValueChange(it) },
+            textStyle = TextStyle(
+                color = colorResource(id = R.color.grey_placeholder),
+                fontSize = 14.sp
+            ),
+            placeholder = {
+                Text(
+                    text = stringResource(id = text),
+                    fontSize = 14.sp,
+                    modifier = Modifier,
+                    color = colorResource(id = R.color.grey_placeholder)
+                )
+            },
+            colors = TextFieldDefaults.textFieldColors(
+                containerColor = Color.Transparent
+            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(MaterialTheme.colorScheme.background.copy(alpha = 0f))
+                .onFocusChanged { focusState ->
+                    isFocused = focusState.isFocused
+                }
+            ,
+            singleLine = true,
+
+
+            )
+    }
+
+
 
 }

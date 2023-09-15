@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -32,6 +33,7 @@ import br.senai.sp.jandira.abcdown_mobile.R
 fun ButtonArrowCircular(
     navController: NavController,
     modifier: Modifier = Modifier,
+    modifierImage: Modifier = Modifier,
     imageResId: Int,
     onClick: (NavController) -> Unit,
     color: Color,
@@ -42,15 +44,14 @@ fun ButtonArrowCircular(
             .clip(CircleShape)
             .background(color)
             .clickable(onClick = { onClick(navController) }),
+        contentAlignment = Alignment.Center
 
     ) {
         Image(
             painter = painterResource(id = imageResId),
             contentDescription = null,
             contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp),
+            modifier = modifierImage,
             alignment = Alignment.Center
         )
 

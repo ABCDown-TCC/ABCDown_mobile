@@ -24,8 +24,8 @@ fun ApplicationStartupScreenScreen(navController: NavController) {
 
     LaunchedEffect(true) {
         // Irá automáticamente para a screen log-in
-        delay(1500)
-        navController.navigate("login")
+        delay(1)
+        navController.navigate("forgetPassword")
     }
 
     Column (modifier = Modifier

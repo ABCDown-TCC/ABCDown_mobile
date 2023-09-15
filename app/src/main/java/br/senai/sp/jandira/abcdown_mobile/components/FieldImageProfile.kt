@@ -26,24 +26,24 @@ fun FieldImageProfile() {
     Box(
         modifier = Modifier
 
-            .width(170.dp)
-            .height(175.dp)
+            .width(155.dp)
+            .height(160.dp)
     ) {
         Image(
             painter = painterResource(id = R.drawable.image_profile_field),
             contentDescription = "field image profile",
-            modifier = Modifier.size(170.dp),
+            modifier = Modifier.size(155.dp),
             alignment = Alignment.Center
         )
-
+        fixing screens
         Image(
             painter = painterResource(
                 id = R.drawable.add_photo_24
             ),
             contentDescription = "icon adding photo",
             modifier = Modifier
-                .width(52.dp)
-                .height(48.dp)
+                .width(48.dp)
+                .height(40.dp)
                 .align(Alignment.BottomEnd)
 
         )

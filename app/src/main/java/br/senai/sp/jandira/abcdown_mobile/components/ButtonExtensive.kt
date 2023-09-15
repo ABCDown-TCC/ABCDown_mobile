@@ -25,6 +25,7 @@ import br.senai.sp.jandira.abcdown_mobile.R
 fun ButtonExtensive(
     navController: NavController,
     text: Int,
+    modifier: Modifier = Modifier,
     onClick: (NavController) -> Unit
 
     ){
@@ -32,7 +33,7 @@ fun ButtonExtensive(
 
     Button(
         onClick = { onClick(navController) },
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(45.dp),
         colors = ButtonDefaults.buttonColors(colorResource(id = R.color.blue)),

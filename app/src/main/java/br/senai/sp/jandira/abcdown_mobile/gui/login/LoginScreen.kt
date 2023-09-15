@@ -3,12 +3,17 @@ package br.senai.sp.jandira.abcdown_mobile.gui.login
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,18 +21,23 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.modifier.ModifierLocalReadScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
+import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.ContinueWithGoogle
 import br.senai.sp.jandira.abcdown_mobile.components.FooterWithNavigationText
@@ -41,65 +51,91 @@ fun LoginScreen(navController: NavController) {
     var password by rememberSaveable { mutableStateOf("") }
 
     Column(
-        modifier = androidx.compose.ui.Modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
+            .padding(start = 15.dp, top = 80.dp, end = 15.dp, bottom = 20.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceBetween
     )
     {
-        Image(
-            painter = painterResource(id = R.drawable.logo_login),
-            contentDescription = "image logo",
-            modifier = Modifier
-                .width(83.dp)
-                .height(73.dp)
-        )
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(
+                painter = painterResource(id = R.drawable.logo_login),
+                contentDescription = "image logo",
+                modifier = Modifier
+                    .width(83.dp)
+                    .height(73.dp)
+            )
 
-        Text(
-            text = stringResource(id = R.string.welcome),
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold
-        )
+            Text(
+                text = stringResource(id = R.string.welcome),
+                modifier = Modifier.padding(top = 20.dp),
+                fontSize = 25.sp,
+                fontWeight = FontWeight.Bold,
+            )
 
-        Text(
-            text = stringResource(id = R.string.log_in_to_your_account),
-            fontSize = 15.sp,
-            fontWeight = FontWeight.Normal
-        )
-
-        TextField(
-            text = R.string.type_your_email_or_user,
-            fieldName = R.string.email_or_user,
-            keyboardType = KeyboardType.Text,
-            email
-        ) {
-            email = it
+            Text(
+                text = stringResource(id = R.string.log_in_to_your_account),
+                modifier = Modifier.padding(top = 6.dp),
+                fontSize = 15.sp,
+                fontWeight = FontWeight.Normal
+            )
         }
 
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
-            password
-        ) {
-            password = it
-        }
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            TextField(
+                text = R.string.type_your_email_or_user,
+                fieldName = R.string.email_or_user,
+                keyboardType = KeyboardType.Text,
+                email
+            ) {
+                email = it
+            }
 
-        Text(
-            text = stringResource(id = R.string.forget_password),
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable {
-                    navController.navigate("forgetPassword")
-                },
+            TextField(
+                text = R.string.enter_with_your_password,
+                fieldName = R.string.password,
+                keyboardType = KeyboardType.Text,
+                password
+            ) {
+                password = it
+            }
+
+            Text(
+                text = stringResource(id = R.string.forget_password),
+                modifier = Modifier
+                    .clickable {
+                        navController.navigate("forgetPassword")
+                    }
+                    .align(Alignment.End)
+                    .padding(top = 20.dp, bottom = 20.dp),
+
+                fontSize = 14.sp
 
             )
 
-        ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
-            navController.navigate("studentArea")
-        })
+            ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
+                navController.navigate("studentArea")
+            })
 
-        ContinueWithGoogle(text = stringResource(id = R.string.continue_with_google))
+            ContinueWithGoogle(text = stringResource(id = R.string.continue_with_google))
 
+            ButtonArrowCircular(
+                navController = navController,
+                modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp)
+                    .shadow(2.dp, shape = CircleShape),
+                modifierImage = Modifier.size(40.dp),
+                imageResId = R.drawable.logo_google,
+                onClick = {
+                    navController.navigate("login")
+                },
+                color = Color.White
+
+            )
+        }
 
 
         FooterWithNavigationText(

@@ -2,8 +2,10 @@ package br.senai.sp.jandira.abcdown_mobile.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -30,13 +32,14 @@ fun TextFieldForVerificationCode(
     val blueColor = colorResource(id = R.color.blue)
     val blueColorReducedOpacity = blueColor.copy(0.4f)
 
-    Row (
+    Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxWidth()
-    ){
+    ) {
 
-        OutlinedTextField(value = value,
+        OutlinedTextField(
+            value = value,
             keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
             onValueChange = { onValueChange(it) },
             colors = TextFieldDefaults.textFieldColors(
@@ -49,7 +52,10 @@ fun TextFieldForVerificationCode(
                 .clip(RoundedCornerShape(10.dp))
         )
 
-        OutlinedTextField(value = value,
+        Spacer(modifier = Modifier.width(15.dp))
+
+        OutlinedTextField(
+            value = value,
             keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
             onValueChange = { onValueChange(it) },
             colors = TextFieldDefaults.textFieldColors(
@@ -62,7 +68,11 @@ fun TextFieldForVerificationCode(
                 .clip(RoundedCornerShape(10.dp))
         )
 
-        OutlinedTextField(value = value,
+        Spacer(modifier = Modifier.width(15.dp))
+
+
+        OutlinedTextField(
+            value = value,
             keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
             onValueChange = { onValueChange(it) },
             colors = TextFieldDefaults.textFieldColors(
@@ -75,7 +85,10 @@ fun TextFieldForVerificationCode(
                 .clip(RoundedCornerShape(10.dp))
         )
 
-        OutlinedTextField(value = value,
+        Spacer(modifier = Modifier.width(15.dp))
+
+        OutlinedTextField(
+            value = value,
             keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
             onValueChange = { onValueChange(it) },
             colors = TextFieldDefaults.textFieldColors(
