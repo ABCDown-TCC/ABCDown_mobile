@@ -38,7 +38,7 @@ fun FooterWithNavigationText(
     ) {
         Text(
             text = text,
-            fontSize = 13.sp
+            fontSize = 14.sp
         )
 
         Spacer(modifier = Modifier.width(2.dp))
@@ -49,7 +49,7 @@ fun FooterWithNavigationText(
                 .clickable {
                     navController.navigate(navigate!!)
                 },
-            fontSize = 13.sp,
+            fontSize = 14.sp,
             color = colorResource(id = R.color.blue),
             fontWeight = FontWeight.Medium
         )

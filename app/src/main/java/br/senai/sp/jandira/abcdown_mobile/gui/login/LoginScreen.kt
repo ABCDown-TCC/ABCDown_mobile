@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -64,21 +65,21 @@ fun LoginScreen(navController: NavController) {
                 painter = painterResource(id = R.drawable.logo_login),
                 contentDescription = "image logo",
                 modifier = Modifier
-                    .width(83.dp)
-                    .height(73.dp)
+                    .width(93.dp)
+                    .height(83.dp)
             )
 
             Text(
                 text = stringResource(id = R.string.welcome),
                 modifier = Modifier.padding(top = 20.dp),
-                fontSize = 25.sp,
+                fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
             )
 
             Text(
                 text = stringResource(id = R.string.log_in_to_your_account),
                 modifier = Modifier.padding(top = 6.dp),
-                fontSize = 15.sp,
+                fontSize = 20.sp,
                 fontWeight = FontWeight.Normal
             )
         }
@@ -102,6 +103,9 @@ fun LoginScreen(navController: NavController) {
                 password = it
             }
 
+
+
+
             Text(
                 text = stringResource(id = R.string.forget_password),
                 modifier = Modifier
@@ -118,16 +122,18 @@ fun LoginScreen(navController: NavController) {
             ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
                 navController.navigate("studentArea")
             })
+            
+            Spacer(modifier = Modifier.height(8.dp))
 
             ContinueWithGoogle(text = stringResource(id = R.string.continue_with_google))
 
             ButtonArrowCircular(
                 navController = navController,
                 modifier = Modifier
-                    .width(50.dp)
-                    .height(50.dp)
-                    .shadow(2.dp, shape = CircleShape),
-                modifierImage = Modifier.size(40.dp),
+                    .width(55.dp)
+                    .height(55.dp)
+                    .shadow(3.dp, shape = CircleShape),
+                modifierImage = Modifier.size(45.dp),
                 imageResId = R.drawable.logo_google,
                 onClick = {
                     navController.navigate("login")

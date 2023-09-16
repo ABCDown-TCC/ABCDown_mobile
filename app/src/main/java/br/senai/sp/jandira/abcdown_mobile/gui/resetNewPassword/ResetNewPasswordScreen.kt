@@ -1,6 +1,7 @@
 package br.senai.sp.jandira.abcdown_mobile.gui.resetNewPassword
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -38,56 +39,65 @@ fun ResetNewPasswordScreen(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(start = 15.dp, top = 25.dp, end = 20.dp),
+            .padding(start = 15.dp, top = 25.dp, end = 20.dp, bottom = 25.dp),
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
 
-        ButtonArrowCircular(
-            navController = navController,
-            modifier = Modifier
-                .width(40.dp)
-                .height(40.dp)
-                .shadow(4.dp, shape = CircleShape),
-            modifierImage = Modifier.size(18.dp),
-            imageResId = R.drawable.arrow_back_24,
-            onClick = {
-                navController.navigate("codeCheck")
-            },
-            color = colorResource(id = R.color.blue)
-        )
+        Column {
+            ButtonArrowCircular(
+                navController = navController,
+                modifier = Modifier
+                    .width(40.dp)
+                    .height(40.dp)
+                    .shadow(4.dp, shape = CircleShape),
+                modifierImage = Modifier.size(18.dp),
+                imageResId = R.drawable.arrow_back_24,
+                onClick = {
+                    navController.navigate("codeCheck")
+                },
+                color = colorResource(id = R.color.blue)
+            )
 
-        Spacer(modifier = Modifier.height(50.dp))
+            Spacer(modifier = Modifier.height(50.dp))
 
-        HeaderForgetPassword(
-            imageResId = R.drawable.icon_padlock,
-            title = stringResource(id = R.string.reset_my_password),
-            description = stringResource(id = R.string.reset_my_password_description)
-        )
+            HeaderForgetPassword(
+                imageResId = R.drawable.icon_padlock,
+                title = stringResource(id = R.string.reset_my_password),
+                description = stringResource(id = R.string.reset_my_password_description)
+            )
 
-        Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
-        TextField(
-            text = R.string.type_your_new_password,
-            fieldName = R.string.new_password,
-            keyboardType = KeyboardType.Password,
-            password
-        ) {
-            password = it
+            TextField(
+                text = R.string.type_your_new_password,
+                fieldName = R.string.new_password,
+                keyboardType = KeyboardType.Password,
+                password
+            ) {
+                password = it
+            }
+
+            TextField(
+                text = R.string.confirm_your_new_password,
+                fieldName = R.string.confirm_password,
+                keyboardType = KeyboardType.Password,
+                password
+            ) {
+                password = it
+            }
         }
 
-        TextField(
-            text = R.string.confirm_your_new_password,
-            fieldName = R.string.confirm_password,
-            keyboardType = KeyboardType.Password,
-            password
-        ) {
-            password = it
+        Column {
+            ButtonExtensive(navController = navController, text = R.string.confirm, onClick = {
+                navController.navigate("login")
+            })
+
         }
 
-        Spacer(modifier = Modifier.height(100.dp))
 
-        ButtonExtensive(navController = navController, text = R.string.confirm, onClick = {
-            navController.navigate("login")
-        })
+
+
+
 
 
     }

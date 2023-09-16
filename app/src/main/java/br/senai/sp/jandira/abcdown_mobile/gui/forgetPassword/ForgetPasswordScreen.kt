@@ -45,51 +45,61 @@ fun ForgetPasswordScreen(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(start = 15.dp, top = 25.dp, end = 15.dp),
+            .padding(start = 15.dp, top = 25.dp, end = 15.dp, bottom = 25.dp),
+        verticalArrangement = Arrangement.SpaceBetween
 
         ) {
-        ButtonArrowCircular(
-            navController = navController,
-            modifier = Modifier
-                .width(40.dp)
-                .height(40.dp)
-                .shadow(4.dp, shape = CircleShape),
-            modifierImage = Modifier.size(18.dp),
-            imageResId = R.drawable.arrow_back_24,
-            onClick = {
-                navController.navigate("login")
-            },
-            color = colorResource(id = R.color.blue)
 
-        )
-        
-        Spacer(modifier = Modifier.height(50.dp))
+        Column {
+            ButtonArrowCircular(
+                navController = navController,
+                modifier = Modifier
+                    .width(40.dp)
+                    .height(40.dp)
+                    .shadow(4.dp, shape = CircleShape),
+                modifierImage = Modifier.size(18.dp),
+                imageResId = R.drawable.arrow_back_24,
+                onClick = {
+                    navController.navigate("login")
+                },
+                color = colorResource(id = R.color.blue)
 
-        HeaderForgetPassword(
-            imageResId = R.drawable.icon_email,
-            title = stringResource(id = R.string.forgot_my_password),
-            description = stringResource(id = R.string.forgot_my_password_description)
-        )
+            )
 
-        Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(50.dp))
 
-        TextField(
-            text = R.string.type_your_email_or_user,
-            fieldName = R.string.email_or_user,
-            keyboardType = KeyboardType.Text,
-            email
-        ) {
-            email = it
+            HeaderForgetPassword(
+                imageResId = R.drawable.icon_email,
+                title = stringResource(id = R.string.forgot_my_password),
+                description = stringResource(id = R.string.forgot_my_password_description)
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            TextField(
+                text = R.string.type_your_email_or_user,
+                fieldName = R.string.email_or_user,
+                keyboardType = KeyboardType.Text,
+                email
+            ) {
+                email = it
+            }
+
         }
 
-        Spacer(modifier = Modifier.height(100.dp))
+        Column {
+            ButtonExtensive(
+                navController = navController,
+                text = R.string.send,
+                onClick = {
+                    navController.navigate("codeCheck")
+                })
+        }
 
-        ButtonExtensive(
-            navController = navController,
-            text = R.string.send,
-            onClick = {
-            navController.navigate("codeCheck")
-        })
+
+
+
+
 
 
     }

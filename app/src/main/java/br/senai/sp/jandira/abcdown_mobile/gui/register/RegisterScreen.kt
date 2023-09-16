@@ -27,6 +27,8 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -68,22 +70,37 @@ fun RegisterScreen(navController: NavController) {
                 color = colorResource(id = R.color.blue)
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
                     text = stringResource(
-                        id = R.string.create_an_account_now
+                        id = R.string.create_an_account_register
                     ),
-                    fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold
+                    color = colorResource(id = R.color.blue),
+                    fontSize = 33.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
                 )
+                
+                Spacer(modifier = Modifier.height(2.dp))
+                
+                 Text(
+                     text = stringResource(id = R.string.now_register),
+                     modifier = Modifier.fillMaxWidth(),
+                     color = colorResource(id = R.color.blue),
+                     fontSize = 33.sp,
+                     fontWeight = FontWeight.Bold,
+                     textAlign = TextAlign.Center,
+
+                 )
+                
                 Spacer(modifier = Modifier.height(20.dp))
 
                 FieldImageProfile()
             }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(40.dp))
 
             TextField(
                 text = R.string.type_your_email_or_user,

@@ -3,8 +3,10 @@ package br.senai.sp.jandira.abcdown_mobile.components
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -39,21 +41,25 @@ fun HeaderForgetPassword(
             painter = painterResource(id = imageResId),
             contentDescription = null,
             modifier = Modifier
-                .size(80.dp)
+                .size(90.dp)
 
         )
 
         Text(
             text = title,
             modifier = Modifier.padding(top = 20.dp),
-            fontSize = 25.sp,
+            fontSize = 28.sp,
             fontWeight = FontWeight.Bold
         )
 
+        Spacer(modifier = Modifier.height(6.dp))
+
         Text(
             text = description,
-            modifier = Modifier.width(260.dp).padding(bottom = 20.dp),
-            fontSize = 15.sp,
+            modifier = Modifier
+                .width(360.dp)
+                .padding(bottom = 20.dp),
+            fontSize = 18.sp,
             fontWeight = FontWeight.Normal,
             textAlign = TextAlign.Center
         )
