@@ -57,41 +57,16 @@ fun StudentAreaScreen(navController: NavController) {
 
         FieldImageProfile()
 
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
-            email
-        ) {
-            email = it
-        }
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
+        br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+            label = R.string.password,
+            placeholder = R.string.password,
+            keyboardType = KeyboardType.Password,
             password
         ) {
             password = it
         }
 
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
-            nome
-        ) {
-            nome = it
-        }
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
-            nome
-        ) {
-            nome = it
-        }
-
-
+        Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
 
 
 
@@ -100,13 +75,13 @@ fun StudentAreaScreen(navController: NavController) {
             fontSize = 12.sp
         )
 
-        TextField(
-            text = R.string.enter_with_your_password,
-            fieldName = R.string.password,
-            keyboardType = KeyboardType.Text,
-            nome
+        br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+            label = R.string.password,
+            placeholder = R.string.password,
+            keyboardType = KeyboardType.Password,
+            password
         ) {
-            nome = it
+            password = it
         }
 
         ButtonOutlined(

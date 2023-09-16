@@ -35,13 +35,13 @@ fun ButtonExtensive(
         onClick = { onClick(navController) },
         modifier = modifier
             .fillMaxWidth()
-            .height(45.dp),
+            .height(55.dp),
         colors = ButtonDefaults.buttonColors(colorResource(id = R.color.blue)),
         shape = RoundedCornerShape(8.dp),
     ){
         Text(
             text = stringResource(id = text).uppercase(),
-            fontSize = 14.sp,
+            fontSize = 15.5.sp,
             fontWeight = FontWeight.SemiBold,
             color = Color.White
         )

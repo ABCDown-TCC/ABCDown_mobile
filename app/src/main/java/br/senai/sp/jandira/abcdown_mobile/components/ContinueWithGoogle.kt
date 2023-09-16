@@ -32,7 +32,7 @@ fun ContinueWithGoogle(
             modifier = Modifier
                 .weight(1f)
                 .height(1.dp)
-                .background(colorResource(id = R.color.grey_border_textfild))
+                .background(colorResource(id = R.color.grey_border_textfield))
         )
         Text(
             text = text,
@@ -44,7 +44,7 @@ fun ContinueWithGoogle(
             modifier = Modifier
                 .weight(1f)
                 .height(1.dp)
-                .background(colorResource(id = R.color.grey_border_textfild))
+                .background(colorResource(id = R.color.grey_border_textfield))
         )
     }
 

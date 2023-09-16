@@ -107,43 +107,47 @@ fun RegisterEmailPasswordScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.email,
+                placeholder = R.string.email,
+                keyboardType = KeyboardType.Email,
                 email
             ) {
                 email = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.confirm_your_email,
+                placeholder = R.string.confirm_your_email,
+                keyboardType = KeyboardType.Email,
                 email
             ) {
                 email = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.password,
+                placeholder = R.string.password,
+                keyboardType = KeyboardType.Password,
                 password
             ) {
                 password = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.confirm_password,
+                placeholder = R.string.confirm_password,
+                keyboardType = KeyboardType.Password,
                 password
             ) {
                 password = it
             }
-
-
         }
 
         Column(

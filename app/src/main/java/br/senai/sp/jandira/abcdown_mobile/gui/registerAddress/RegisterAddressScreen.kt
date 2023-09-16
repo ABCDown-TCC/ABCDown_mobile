@@ -39,7 +39,11 @@ fun RegisterAddressScreen(navController: NavController) {
 
     val context = LocalContext.current
     var cep by rememberSaveable { mutableStateOf("") }
-    var numero by rememberSaveable { mutableStateOf("") }
+    var street by rememberSaveable { mutableStateOf("") }
+    var neighborhood by rememberSaveable { mutableStateOf("") }
+    var city by rememberSaveable { mutableStateOf("") }
+    var state by rememberSaveable { mutableStateOf("") }
+    var number by rememberSaveable { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -95,64 +99,74 @@ fun RegisterAddressScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.cep,
+                placeholder = R.string.example_cep,
+                keyboardType = KeyboardType.Number,
                 cep
             ) {
                 cep = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
-                cep
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.street,
+                placeholder = R.string.street,
+                keyboardType = KeyboardType.Number,
+                street
             ) {
-                cep = it
-            }
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
-                cep
-            ) {
-                cep = it
+                street = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.neighborhood,
+                placeholder = R.string.neighborhood,
                 keyboardType = KeyboardType.Text,
-                cep
+                neighborhood
             ) {
-                cep = it
+                neighborhood = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
-                cep
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.city,
+                placeholder = R.string.city,
+                keyboardType = KeyboardType.Password,
+                city
             ) {
-                cep = it
+                city = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
-                cep
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.state,
+                placeholder = R.string.state,
+                keyboardType = KeyboardType.Password,
+                state
             ) {
-                cep = it
+                state = it
+            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.number,
+                placeholder = R.string.number,
+                keyboardType = KeyboardType.Number,
+                number
+            ) {
+                number = it
             }
         }
 
         Column(
             modifier = Modifier
-                .fillMaxWidth()
-            ,
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.End
         ) {
             ButtonArrowCircular(
@@ -172,8 +186,6 @@ fun RegisterAddressScreen(navController: NavController) {
             )
         }
     }
-
-
 
 
 }

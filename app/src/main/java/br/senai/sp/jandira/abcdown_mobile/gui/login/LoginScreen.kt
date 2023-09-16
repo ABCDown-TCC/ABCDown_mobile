@@ -51,11 +51,12 @@ fun LoginScreen(navController: NavController) {
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
 
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(start = 15.dp, top = 80.dp, end = 15.dp, bottom = 20.dp),
+            .padding(start = 15.dp, top = 85.dp, end = 15.dp, bottom = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     )
@@ -85,24 +86,26 @@ fun LoginScreen(navController: NavController) {
         }
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.email_or_user,
+                placeholder = R.string.type_your_email_or_user,
                 keyboardType = KeyboardType.Text,
                 email
             ) {
                 email = it
             }
+            
+            Spacer(modifier = Modifier.height(15.dp))
 
-            TextField(
-                text = R.string.enter_with_your_password,
-                fieldName = R.string.password,
-                keyboardType = KeyboardType.Text,
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.password,
+                placeholder = R.string.enter_with_your_password,
+                keyboardType = KeyboardType.Password,
                 password
             ) {
                 password = it
             }
-
 
 
 
@@ -122,8 +125,8 @@ fun LoginScreen(navController: NavController) {
             ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
                 navController.navigate("studentArea")
             })
-            
-            Spacer(modifier = Modifier.height(8.dp))
+
+            Spacer(modifier = Modifier.height(15.dp))
 
             ContinueWithGoogle(text = stringResource(id = R.string.continue_with_google))
 

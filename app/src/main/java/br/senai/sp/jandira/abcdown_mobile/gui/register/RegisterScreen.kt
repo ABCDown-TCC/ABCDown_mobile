@@ -102,41 +102,48 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.name,
+                placeholder = R.string.name,
                 keyboardType = KeyboardType.Text,
                 name
             ) {
                 name = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.cpf,
+                placeholder = R.string.example_cpf,
+                keyboardType = KeyboardType.Number,
                 cpf
             ) {
                 cpf = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.date_of_birthday,
+                placeholder = R.string.date_of_birthday,
                 keyboardType = KeyboardType.Text,
                 dateOfBirth
             ) {
                 dateOfBirth = it
             }
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.gender,
+                placeholder = R.string.gender,
+                keyboardType = KeyboardType.Password,
                 gender
             ) {
                 gender = it
             }
+
 
         }
 

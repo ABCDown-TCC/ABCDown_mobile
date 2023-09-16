@@ -16,6 +16,11 @@
 
     // SCREEN REGISTER
     <string name="create_an_account_register">Crie uma conta</string>
+    <string name="name">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="example_cpf">Ex. 999.999.999-99</string>
+    <string name="date_of_birthday">Data de nascimento</string>
+    <string name="gender">Gênero</string>
     <string name="now_register">agora!</string>
     <string name="register_your">Registre seu</string>
     <string name="address">endereço</string>
@@ -23,6 +28,7 @@
     <string name="to_finish_email">insira seu e-mail</string>
     <string name="to_finish_password">e uma senha</string>
     <string name="cep">CEP</string>
+    <string name="example_cep">Ex. 99999-999</string>
     <string name="street">Logradouro</string>
     <string name="neighborhood">Bairro</string>
     <string name="city">Cidade</string>
