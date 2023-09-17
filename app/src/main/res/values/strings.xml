@@ -69,6 +69,16 @@
     <string name="track_registered_students">Acompanhe os estudantes que você cadastrou</string>
     <string name="continue_register">Continuar</string>
     <string name="set_student_password">Agora defina uma senha para que o aluno acesse sua conta a partir dela: </string>
+    <string name="accompany">Acompanhar</string>
+
+    // SCREEN HOME
+
+    // SCREEN SETTINGS
+<!--    <string name="personal_data">Dados pessoais</string>-->
+<!--    <string name="personal_data">Dados pessoais</string>-->
+<!--    <string name="personal_data">Trocar senha</string>-->
+<!--    <string name="personal_data">Configurações</string>-->
+
 
     <string name="cancel">Cancelar</string>
 </resources>
