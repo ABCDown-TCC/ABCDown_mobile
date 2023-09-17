@@ -11,14 +11,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.senai.sp.jandira.abcdown_mobile.gui.applicationStartup.ApplicationStartupScreenScreen
-import br.senai.sp.jandira.abcdown_mobile.gui.codeCheck.CodeCheckScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.forgetPassword.CodeCheckScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.forgetPassword.ForgetPasswordScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.login.LoginScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.register.RegisterScreen
-import br.senai.sp.jandira.abcdown_mobile.gui.registerAddress.RegisterAddressScreen
-import br.senai.sp.jandira.abcdown_mobile.gui.registerEmailPassword.RegisterEmailPasswordScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.register.RegisterAddressScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.register.RegisterEmailPasswordScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.StudentAreaScreen
-import br.senai.sp.jandira.abcdown_mobile.gui.resetNewPassword.ResetNewPasswordScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.forgetPassword.ResetNewPasswordScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.RegisterClassPasswordScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.RegisterStudentScreen
 import br.senai.sp.jandira.abcdown_mobile.ui.theme.ABCDown_mobileTheme
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
@@ -62,6 +64,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         composable(route = "codeCheck") { CodeCheckScreen(navController) }
         composable(route = "resetNewPassword") { ResetNewPasswordScreen(navController) }
         composable(route = "studentArea") { StudentAreaScreen(navController) }
+        composable(route = "registerClassPassword") { RegisterClassPasswordScreen(navController) }
+        composable(route = "registerStudent") { RegisterStudentScreen(navController) }
 
     }
 }

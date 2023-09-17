@@ -28,14 +28,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.FieldImageProfile
-import br.senai.sp.jandira.abcdown_mobile.components.TextField
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -125,8 +123,8 @@ fun RegisterScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(10.dp))
 
             br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
-                label = R.string.date_of_birthday,
-                placeholder = R.string.date_of_birthday,
+                label = R.string.date_of_birth,
+                placeholder = R.string.date_of_birth,
                 keyboardType = KeyboardType.Text,
                 dateOfBirth
             ) {

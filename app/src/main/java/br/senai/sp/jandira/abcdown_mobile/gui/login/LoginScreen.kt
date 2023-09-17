@@ -42,7 +42,6 @@ import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.ContinueWithGoogle
 import br.senai.sp.jandira.abcdown_mobile.components.FooterWithNavigationText
-import br.senai.sp.jandira.abcdown_mobile.components.TextField
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -123,7 +122,7 @@ fun LoginScreen(navController: NavController) {
             )
 
             ButtonExtensive(navController = navController, text = R.string.enter, onClick = {
-                navController.navigate("studentArea")
+                navController.navigate("registerStudent")
             })
 
             Spacer(modifier = Modifier.height(15.dp))

@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.abcdown_mobile.gui.registerAddress
+package br.senai.sp.jandira.abcdown_mobile.gui.register
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
-import br.senai.sp.jandira.abcdown_mobile.components.TextField
 
 @Composable
 fun RegisterAddressScreen(navController: NavController) {

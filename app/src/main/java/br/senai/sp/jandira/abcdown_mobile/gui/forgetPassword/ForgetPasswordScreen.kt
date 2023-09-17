@@ -33,8 +33,7 @@ import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.HeaderForgetPassword
-import br.senai.sp.jandira.abcdown_mobile.components.TextField
-import kotlinx.coroutines.delay
+
 
 @Composable
 fun ForgetPasswordScreen(navController: NavController) {
@@ -76,14 +75,15 @@ fun ForgetPasswordScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            TextField(
-                text = R.string.type_your_email_or_user,
-                fieldName = R.string.email_or_user,
-                keyboardType = KeyboardType.Text,
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.email,
+                placeholder = R.string.type_your_email,
+                keyboardType = KeyboardType.Email,
                 email
             ) {
                 email = it
             }
+
 
         }
 

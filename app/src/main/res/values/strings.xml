@@ -19,14 +19,17 @@
     <string name="name">Nome</string>
     <string name="cpf">CPF</string>
     <string name="example_cpf">Ex. 999.999.999-99</string>
-    <string name="date_of_birthday">Data de nascimento</string>
+    <string name="date_of_birth">Data de nascimento</string>
     <string name="gender">Gênero</string>
     <string name="now_register">agora!</string>
     <string name="register_your">Registre seu</string>
     <string name="address">endereço</string>
-    <string name="to_finish">Para finalizar,</string>
-    <string name="to_finish_email">insira seu e-mail</string>
     <string name="to_finish_password">e uma senha</string>
+    <string name="to_finish_email">insira seu e-mail</string>
+    <string name="to_finish">Para finalizar,</string>
+    <string name="confirm_your_email">Confirme seu e-mail</string>
+    <string name="email">E-mail</string>
+    <string name="type_your_email">Digite seu e-mail</string>
     <string name="cep">CEP</string>
     <string name="example_cep">Ex. 99999-999</string>
     <string name="street">Logradouro</string>
@@ -47,33 +50,25 @@
     <string name="did_not_get_email">Nâo recebeu o e-mail?</string>
     <string name="resend">Reenviar</string>
 
-
-    <string name="confirm">Confirmar</string>
-    <string name="cancel">Cancelar</string>
-
-
-
-
-
-
+    // SCREEN RESET PASSWORD
     <string name="reset_my_password">Redefinir minha senha</string>
     <string name="reset_my_password_description">Agora, insira sua nova senha</string>
     <string name="new_password">Nova senha</string>
     <string name="type_your_new_password">Digite sua nova senha</string>
     <string name="confirm_password">Confirmar senha</string>
     <string name="confirm_your_new_password">Confirme sua nova senha</string>
+    <string name="confirm">Confirmar</string>
     <string name="confirm_your_password">Confirme sua senha</string>
-    <string name="confirm_your_email">Confirme seu e-mail</string>
-    <string name="email">E-mail</string>
-    <string name="type_your_email">Digite seu e-mail</string>
 
-
+    // SCREEN AREA STUDENT
+    <string name="register_student">Cadastrar estudante</string>
     <string name="class_code">Código da turma</string>
     <string name="type_class_code">Digite o cógigo que o professor compartilhou com você aqui</string>
     <string name="explanation_class_code">Se o professor do aluno utiliza nosso APP, insira aqui o código da turma. Não entendeu? Saber mais</string>
     <string name="studant_area">Área do estudante</string>
     <string name="track_registered_students">Acompanhe os estudantes que você cadastrou</string>
-    <string name="new_option">Novo</string>
-    <string name="all_option">Todos</string>
+    <string name="continue_register">Continuar</string>
+    <string name="set_student_password">Agora defina uma senha para que o aluno acesse sua conta a partir dela: </string>
 
+    <string name="cancel">Cancelar</string>
 </resources>

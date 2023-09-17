@@ -32,7 +32,7 @@ fun ButtonOutlined(
         onClick = { onClick(navController) },
         modifier = modifier
             .fillMaxWidth()
-            .height(45.dp)
+            .height(55.dp)
             .background(Color.White)
         ,
         colors = ButtonDefaults.buttonColors(Color.Transparent),
@@ -41,7 +41,7 @@ fun ButtonOutlined(
     ){
         Text(
             text = stringResource(id = text).uppercase(),
-            fontSize = 14.sp,
+            fontSize = 15.5.sp,
             fontWeight = FontWeight.SemiBold,
             color = colorText
         )
