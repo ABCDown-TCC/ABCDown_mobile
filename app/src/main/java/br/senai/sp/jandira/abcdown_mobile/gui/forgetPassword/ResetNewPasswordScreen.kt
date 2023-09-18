@@ -28,12 +28,14 @@ import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.HeaderForgetPassword
+import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldPassword
 
 
 @Composable
 fun ResetNewPasswordScreen(navController: NavController) {
     val context = LocalContext.current
     var password by rememberSaveable { mutableStateOf("") }
+    var confirm_password by rememberSaveable { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -68,10 +70,9 @@ fun ResetNewPasswordScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+            OutlinedTextFieldPassword(
                 label = R.string.new_password,
                 placeholder = R.string.new_password,
-                keyboardType = KeyboardType.Password,
                 password
             ) {
                 password = it
@@ -79,13 +80,12 @@ fun ResetNewPasswordScreen(navController: NavController) {
 
             Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
-                label = R.string.confirm_your_password,
+            OutlinedTextFieldPassword(
+                label = R.string.confirm_your_new_password,
                 placeholder = R.string.confirm_your_new_password,
-                keyboardType = KeyboardType.Password,
-                password
+                confirm_password
             ) {
-                password = it
+                confirm_password = it
             }
         }
 

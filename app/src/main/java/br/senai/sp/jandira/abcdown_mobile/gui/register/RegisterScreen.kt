@@ -44,6 +44,7 @@ fun RegisterScreen(navController: NavController) {
     var cpf by rememberSaveable { mutableStateOf("") }
     var dateOfBirth by rememberSaveable { mutableStateOf("") }
     var gender by rememberSaveable { mutableStateOf("") }
+    var number by rememberSaveable { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -127,12 +128,32 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(10.dp))
 
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.date_of_birth,
+                placeholder = R.string.date_of_birth,
+                keyboardType = KeyboardType.Number,
+                dateOfBirth
+            ) {
+                dateOfBirth = it
+            }
+
 //            OutlinedTextFieldDate(
 //                dateOfBirth
 //            )
 //            {
 //                dateOfBirth = it
 //            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+                label = R.string.phone,
+                placeholder = R.string.phone,
+                keyboardType = KeyboardType.Number,
+                number
+            ) {
+                number = it
+            }
 
             Spacer(modifier = Modifier.height(10.dp))
 

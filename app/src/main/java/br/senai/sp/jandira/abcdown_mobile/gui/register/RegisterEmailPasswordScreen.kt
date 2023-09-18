@@ -40,6 +40,7 @@ fun RegisterEmailPasswordScreen(navController: NavController) {
 
     val context = LocalContext.current
     var password by rememberSaveable { mutableStateOf("") }
+    var confirmPassword by rememberSaveable { mutableStateOf("") }
     var email by rememberSaveable { mutableStateOf("") }
 
     Column(
@@ -136,24 +137,26 @@ fun RegisterEmailPasswordScreen(navController: NavController) {
             ) {
                 password = it
             }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            OutlinedTextFieldPassword(
+                label = R.string.confirm_password,
+                placeholder = R.string.confirm_password,
+                confirmPassword
+            ) {
+                confirmPassword = it
+            }
         }
+        Column(
 
-        Spacer(modifier = Modifier.height(10.dp))
-
-        OutlinedTextFieldPassword(
-            label = R.string.confirm_password,
-            placeholder = R.string.confirm_password,
-            password
         ) {
-            password = it
+            ButtonExtensive(navController = navController, text = R.string.register, onClick = {
+                navController.navigate("login")
+            })
         }
+
     }
 
-    Column(
 
-    ) {
-        ButtonExtensive(navController = navController, text = R.string.register, onClick = {
-            navController.navigate("login")
-        })
-    }
 }
