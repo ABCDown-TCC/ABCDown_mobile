@@ -38,6 +38,10 @@
     <string name="state">Estado</string>
     <string name="number">Número</string>
     <string name="register">Cadastrar</string>
+    <string name="male">Masculino</string>
+    <string name="feminine">Feminino</string>
+    <string name="outhers">Outros</string>
+
 
     // SCREEN FORGET PASSWORD
     <string name="send">Enviar</string>

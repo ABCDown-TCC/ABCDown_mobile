@@ -42,6 +42,7 @@ import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.ContinueWithGoogle
 import br.senai.sp.jandira.abcdown_mobile.components.FooterWithNavigationText
+import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldPassword
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -97,10 +98,9 @@ fun LoginScreen(navController: NavController) {
             
             Spacer(modifier = Modifier.height(15.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+            OutlinedTextFieldPassword(
                 label = R.string.password,
-                placeholder = R.string.enter_with_your_password,
-                keyboardType = KeyboardType.Password,
+                placeholder = R.string.password,
                 password
             ) {
                 password = it

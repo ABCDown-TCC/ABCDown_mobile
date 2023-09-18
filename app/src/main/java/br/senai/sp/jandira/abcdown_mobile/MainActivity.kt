@@ -50,6 +50,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     val navController = rememberAnimatedNavController()
+
+
+
+
     AnimatedNavHost(
         navController = navController,
         startDestination = "startup",

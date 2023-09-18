@@ -33,6 +33,7 @@ import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
+import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldPassword
 
 @Composable
 fun RegisterEmailPasswordScreen(navController: NavController) {
@@ -128,33 +129,31 @@ fun RegisterEmailPasswordScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
+            OutlinedTextFieldPassword(
                 label = R.string.password,
                 placeholder = R.string.password,
-                keyboardType = KeyboardType.Password,
-                password
-            ) {
-                password = it
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
-                label = R.string.confirm_password,
-                placeholder = R.string.confirm_password,
-                keyboardType = KeyboardType.Password,
                 password
             ) {
                 password = it
             }
         }
 
-        Column(
+        Spacer(modifier = Modifier.height(10.dp))
 
+        OutlinedTextFieldPassword(
+            label = R.string.confirm_password,
+            placeholder = R.string.confirm_password,
+            password
         ) {
-            ButtonExtensive(navController = navController, text = R.string.register, onClick = {
-                navController.navigate("login")
-            })
+            password = it
         }
+    }
+
+    Column(
+
+    ) {
+        ButtonExtensive(navController = navController, text = R.string.register, onClick = {
+            navController.navigate("login")
+        })
     }
 }

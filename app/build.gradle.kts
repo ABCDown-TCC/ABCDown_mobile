@@ -78,4 +78,15 @@ dependencies {
 
     // BIBLIOTECA PARA EFEITOS E ANIMAÇÃO
     implementation ("com.google.accompanist:accompanist-navigation-animation:0.30.1")
+
+    // COIL
+    implementation ("io.coil-kt:coil-compose:2.3.0")
+
+    // ROOM
+    implementation ("androidx.room:room-runtime:2.5.2")
+    annotationProcessor ("androidx.room:room-compiler:2.5.2")
+
+    // RETROFIT
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }

@@ -21,6 +21,7 @@ import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ArrowTitleScreen
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonOutlined
+import br.senai.sp.jandira.abcdown_mobile.components.DropdownGender
 import br.senai.sp.jandira.abcdown_mobile.components.FieldImageProfile
 import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField
 
@@ -86,14 +87,7 @@ fun RegisterStudentScreen(
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        OutlinedTextField(
-            label = R.string.gender,
-            placeholder = R.string.gender,
-            keyboardType = KeyboardType.Password,
-            gender
-        ) {
-            gender = it
-        }
+        DropdownGender()
 
 
 

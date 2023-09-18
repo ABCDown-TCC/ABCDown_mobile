@@ -33,7 +33,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
+import br.senai.sp.jandira.abcdown_mobile.components.DropdownGender
 import br.senai.sp.jandira.abcdown_mobile.components.FieldImageProfile
+//import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldDate
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -52,7 +54,7 @@ fun RegisterScreen(navController: NavController) {
     )
     {
 
-        Column() {
+        Column {
 
             ButtonArrowCircular(
                 navController = navController,
@@ -70,7 +72,10 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Text(
                     text = stringResource(
                         id = R.string.create_an_account_register
@@ -80,19 +85,19 @@ fun RegisterScreen(navController: NavController) {
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
                 )
-                
-                Spacer(modifier = Modifier.height(2.dp))
-                
-                 Text(
-                     text = stringResource(id = R.string.now_register),
-                     modifier = Modifier.fillMaxWidth(),
-                     color = colorResource(id = R.color.blue),
-                     fontSize = 33.sp,
-                     fontWeight = FontWeight.Bold,
-                     textAlign = TextAlign.Center,
 
-                 )
-                
+                Spacer(modifier = Modifier.height(2.dp))
+
+                Text(
+                    text = stringResource(id = R.string.now_register),
+                    modifier = Modifier.fillMaxWidth(),
+                    color = colorResource(id = R.color.blue),
+                    fontSize = 33.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
+
+                    )
+
                 Spacer(modifier = Modifier.height(20.dp))
 
                 FieldImageProfile()
@@ -122,33 +127,23 @@ fun RegisterScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
-                label = R.string.date_of_birth,
-                placeholder = R.string.date_of_birth,
-                keyboardType = KeyboardType.Text,
-                dateOfBirth
-            ) {
-                dateOfBirth = it
-            }
+//            OutlinedTextFieldDate(
+//                dateOfBirth
+//            )
+//            {
+//                dateOfBirth = it
+//            }
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
-                label = R.string.gender,
-                placeholder = R.string.gender,
-                keyboardType = KeyboardType.Password,
-                gender
-            ) {
-                gender = it
-            }
+            DropdownGender()
 
 
         }
 
         Column(
             modifier = Modifier
-                .fillMaxWidth()
-                ,
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.End
         ) {
             ButtonArrowCircular(
@@ -167,8 +162,6 @@ fun RegisterScreen(navController: NavController) {
 
             )
         }
-
-
 
 
     }
