@@ -104,7 +104,7 @@ fun RegisterScreen(navController: NavController) {
                 FieldImageProfile()
             }
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
             br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextField(
                 label = R.string.name,

@@ -50,6 +50,7 @@ fun RegisterStudentScreen(
                 navController = navController,
                 text = stringResource(id = R.string.register_student),
                 textColor = Color.Black,
+                arrowColor = Color.Black,
                 onClick = {
                     navController.navigate("studentArea")
                 },

@@ -16,6 +16,7 @@
 
     // FONTS COLORS
     <color name="grey_placeholder">#7E7E7E</color>
+    <color name="blue_card_student">#A5D8F1</color>
 
     // BORDER TEXTFIELD
     <color name="grey_border_textfield">#D3CDCD</color>
