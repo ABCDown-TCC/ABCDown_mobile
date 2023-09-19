@@ -8,7 +8,7 @@ import retrofit2.create
 class RetrofitFactory {
 
     // pesquisar ip base
-    private val URL_BASE = "http://10.107.144.25:3000"
+    private val URL_BASE = " http://10.0.2.2:3000/"
 
     private val retrofitFactory = Retrofit
         .Builder()
@@ -30,7 +30,7 @@ class RetrofitFactory {
 
 
     class RetrofitFactoryViaCep {
-        private val URL_BASE = " https://viacep.com.br/ws/"
+        private val URL_BASE = "https://viacep.com.br/ws/"
         private val retrofitFactory = Retrofit
             .Builder()
             .baseUrl(URL_BASE)

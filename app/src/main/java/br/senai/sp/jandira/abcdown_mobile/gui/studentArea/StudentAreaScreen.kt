@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
+import br.senai.sp.jandira.abcdown_mobile.components.ButtonPerformance
 import br.senai.sp.jandira.abcdown_mobile.components.CardStudent
 import br.senai.sp.jandira.abcdown_mobile.components.TitleDescription
 import br.senai.sp.jandira.abcdown_mobile.ui.theme.ABCDown_mobileTheme
@@ -75,6 +76,8 @@ fun StudentAreaScreen(navController: NavController) {
 
             )
         }
+
+
 
     }
 

@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.abcdown_mobile.gui.login
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -43,6 +44,11 @@ import br.senai.sp.jandira.abcdown_mobile.components.ButtonExtensive
 import br.senai.sp.jandira.abcdown_mobile.components.ContinueWithGoogle
 import br.senai.sp.jandira.abcdown_mobile.components.FooterWithNavigationText
 import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldPassword
+import br.senai.sp.jandira.abcdown_mobile.model.Responsible
+import br.senai.sp.jandira.abcdown_mobile.model.get.ResponsibleList
+import br.senai.sp.jandira.abcdown_mobile.service.RetrofitFactory
+import retrofit2.Call
+import retrofit2.Response
 
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -50,6 +56,8 @@ fun LoginScreen(navController: NavController) {
     val context = LocalContext.current
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
+
+
 
 
     Column(
@@ -134,7 +142,7 @@ fun LoginScreen(navController: NavController) {
                 modifier = Modifier
                     .width(55.dp)
                     .height(55.dp)
-                    .shadow(3.dp, shape = CircleShape),
+                    .shadow(2.dp, shape = CircleShape),
                 modifierImage = Modifier.size(45.dp),
                 imageResId = R.drawable.logo_google,
                 onClick = {
