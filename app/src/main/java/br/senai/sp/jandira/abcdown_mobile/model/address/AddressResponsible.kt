@@ -1,4 +1,8 @@
 package br.senai.sp.jandira.abcdown_mobile.model.address
 
-class AddressResponsible {
-}
+data class AddressResponsible(
+
+    val id: Int,
+    val numero: String,
+    val cep: String,
+)

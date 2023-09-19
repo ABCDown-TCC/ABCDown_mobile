@@ -1,6 +1,6 @@
-package br.senai.sp.jandira.abcdown_mobile.model.register
+package br.senai.sp.jandira.abcdown_mobile.model
 
-data class Register (
+data class Responsible (
     val nome: String,
     val cpf :String,
     val data_nascimento: String,

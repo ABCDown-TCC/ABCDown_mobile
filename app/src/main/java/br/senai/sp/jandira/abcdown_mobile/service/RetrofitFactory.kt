@@ -2,6 +2,7 @@ package br.senai.sp.jandira.abcdown_mobile.service
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 
 class RetrofitFactory {
@@ -23,6 +24,9 @@ class RetrofitFactory {
 //        return retrofitFactory.create(StudentService::class.java)
 //    }
 
+    fun getResponsibleService(): ResponsibleService{
+        return retrofitFactory.create(ResponsibleService::class.java)
+    }
 
 
     class RetrofitFactoryViaCep {
