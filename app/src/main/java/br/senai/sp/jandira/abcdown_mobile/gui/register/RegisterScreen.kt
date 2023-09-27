@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.abcdown_mobile.gui.register
 
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -31,11 +32,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import br.senai.sp.jandira.abcdown_mobile.MainActivity
 import br.senai.sp.jandira.abcdown_mobile.R
 import br.senai.sp.jandira.abcdown_mobile.components.ButtonArrowCircular
 import br.senai.sp.jandira.abcdown_mobile.components.DropdownGender
 import br.senai.sp.jandira.abcdown_mobile.components.FieldImageProfile
-//import br.senai.sp.jandira.abcdown_mobile.components.OutlinedTextFieldDate
+
 
 @Composable
 fun RegisterScreen(navController: NavController) {
@@ -177,6 +179,8 @@ fun RegisterScreen(navController: NavController) {
                 imageResId = R.drawable.arrow_next_24,
                 onClick = {
                     navController.navigate("registerAddress")
+//                    val intent = Intent(context, MainActivity::class.java)
+//                    intent.putExtra()
                 },
                 color = colorResource(id = R.color.blue)
 

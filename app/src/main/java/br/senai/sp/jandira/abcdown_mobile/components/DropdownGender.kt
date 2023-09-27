@@ -46,7 +46,9 @@ import org.w3c.dom.Text
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DropdownGender() {
+fun DropdownGender(
+
+) {
     var isExpanded by remember {
         mutableStateOf(false)
     }
@@ -58,6 +60,7 @@ fun DropdownGender() {
     var textFiledSize by remember {
         mutableStateOf(Size.Zero)
     }
+
 
     var icon = if (isExpanded){
         Icons.Filled.KeyboardArrowUp

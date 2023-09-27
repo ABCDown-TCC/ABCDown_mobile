@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811751767028",
+    "project_id": "abcdown-b5f51",
+    "storage_bucket": "abcdown-b5f51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811751767028:android:621386cc0bd968d16e17a1",
+        "android_client_info": {
+          "package_name": "br.senai.sp.jandira.abcdown_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGRKuG2W5DugWFYoBUrDxT6D5YSh4xEtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

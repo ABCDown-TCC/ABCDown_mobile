@@ -30,7 +30,7 @@ import retrofit2.Response
 fun ApplicationStartupScreenScreen(navController: NavController) {
 
     LaunchedEffect(Unit){
-        val call = RetrofitFactory().getResponsibleService().getResponsible(22)
+        val call = RetrofitFactory().getResponsibleService().getResponsible(5)
         call.enqueue(object : retrofit2.Callback<ResponsibleList> {
             override fun onResponse(
                 call: Call<ResponsibleList>,
@@ -76,9 +76,6 @@ fun ApplicationStartupScreenScreen(navController: NavController) {
     }
 
     var responsavel: List<Responsible>
-
-
-
 
     LaunchedEffect(true) {
         // Irá automáticamente para a screen log-in

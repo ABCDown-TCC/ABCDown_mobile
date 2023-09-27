@@ -1,11 +1,17 @@
+
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
+
 }
 
 android {
     namespace = "br.senai.sp.jandira.abcdown_mobile"
     compileSdk = 33
+
+
 
     defaultConfig {
         applicationId = "br.senai.sp.jandira.abcdown_mobile"
@@ -59,6 +65,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("com.google.firebase:firebase-common-ktx:20.3.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -90,4 +97,7 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // FIREBASE
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
 }
