@@ -104,4 +104,13 @@
 
     // SCREEN EDIT DATA
     <string name="cancel">Cancelar</string>
+
+    // SCREEN ABOUT ABCDOWN
+    <string name="educational_platform">Plataforma educativa ABCDown</string>
+    <string name="teaching_strategy">Noossa estratégia de ensino</string>
+    <string name="about">Sobre</string>
+    <string name="loren">Lorem ipsum dolor sit amet. Qui dolorem dolor non architecto eveniet non adipisci dolor quo eaque praesentium. Aut cupiditate autem in consequatur ullam quo quaerat reprehenderit sit commodi unde ab necessitatibus placeat est voluptatem Quis ut impedit quos.
+</string>
+
+
 </resources>

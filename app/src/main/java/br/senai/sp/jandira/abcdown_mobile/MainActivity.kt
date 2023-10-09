@@ -19,6 +19,7 @@ import br.senai.sp.jandira.abcdown_mobile.gui.register.RegisterAddressScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.register.RegisterEmailPasswordScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.StudentAreaScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.forgetPassword.ResetNewPasswordScreen
+import br.senai.sp.jandira.abcdown_mobile.gui.home.AboutABCDownScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.performance.PerformanceGamesScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.AccompanyStudentScreen
 import br.senai.sp.jandira.abcdown_mobile.gui.studentArea.PersonalDataScreen
@@ -76,6 +77,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         composable(route = "accompanyStudent") { AccompanyStudentScreen(navController) }
         composable(route = "performanceGames") { PerformanceGamesScreen(navController) }
         composable(route = "performanceGames") { PersonalDataScreen(navController) }
+        composable(route = "aboutABCDown") { AboutABCDownScreen(navController) }
 
     }
 }
