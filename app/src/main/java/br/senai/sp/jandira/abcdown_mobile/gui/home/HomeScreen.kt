@@ -3,6 +3,7 @@ package br.senai.sp.jandira.abcdown_mobile.gui.home
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -26,31 +27,36 @@ fun HomeScreen(navController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Card(
-            modifier = Modifier.fillMaxWidth(),
+        Text(text = stringResource(id = R.string.hello))
 
-            ) {
-            Image(
-                painter = painterResource(id = R.drawable.logo_login),
-                contentDescription = "image logo",
-                modifier = Modifier
-                    .width(93.dp)
-                    .height(83.dp)
-            )
-
-            Text(text = stringResource(id = R.string.educational_platform))
-
-            Text(text = stringResource(id = R.string.loren))
-        }
+        Text(text = stringResource(id = R.string.home_select_option))
 
         Column {
-            Text(text = stringResource(id = R.string.about))
+            Card {
 
-            Text(text = stringResource(id = R.string.loren))
+            }
 
-            Text(text = stringResource(id = R.string.teaching_strategy))
+            Row {
+                Card {
 
-            Text(text = stringResource(id = R.string.loren))
+                }
+
+                Card {
+
+                }
+            }
+
+            Row {
+                Card {
+
+                }
+
+                Card {
+
+                }
+            }
+
+
         }
     }
 
